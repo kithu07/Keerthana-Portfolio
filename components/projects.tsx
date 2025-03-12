@@ -13,37 +13,37 @@ const projects = [
     id: 1,
     title: "PixelPerfect",
     category: "Web Development",
-    image: "/placeholder.svg?height=600&width=800",
+    image: "/pixel.png?height=600&width=800",
     description: "An AI-powered UI testing platform featuring A/B testing, color contrast optimization, and real-time metric visualization. Built a dynamic frontend dashboard using Chart.js and integrated Gemini for intelligent UI insights.",
     tags: ["HTML", "CSS", "JavaScript", "Bootstrap", "Chart.js", "Firebase", "Node", "Express", "Gemini"],
     link: "#",
-    github: "#"
+    github: "https://github.com/sachin136631/PixelPerfect"
   },
   {
     id: 2,
     title: "RescueChain",
     category: "Web & Mobile App",
-    image: "/placeholder.svg?height=600&width=800",
+    image: "/rescue.png?height=600&width=800",
     description: "A disaster management platform connecting donors, volunteers, and relief camps with real-time updates, resource tracking, and transparent donation systems. Designed user-friendly interfaces and streamlined volunteer role assignment.",
     tags: ["Python", "HTML5", "CSS3", "Bootstrap", "Firebase", "FastAPI", "JavaScript", "Figma"],
     link: "#",
-    github: "#"
+    github: "https://github.com/kithu07/RescueChain"
   },
   {
     id: 3,
     title: "Evolution Odyssey",
     category: "Game Development",
-    image: "/placeholder.svg?height=600&width=800",
+    image: "/evod.png?height=600&width=800",
     description: "A 2D platformer game where players evolve through different stages while collecting coins and avoiding obstacles. Designed UI, implemented scoring systems, seamless navigation, and integrated immersive sound effects.",
     tags    : ["Lua", "LOVE2D", "Tiled", "GIT"],
     link: "#",
-    github: "#"
+    github: "https://gitlab.com/helloworld4324028/evolutionodyssey"
   },
   {
     id: 4,
     title: "Ninte-Kadha",
     category: "Web App",
-    image: "/placeholder.svg?height=600&width=800",
+    image: "/nitekadha.png?height=600&width=800",
     description: "A personalized storytelling app that transforms your search history into an aesthetically beautiful narrative using AI-generated insights and a sleek Next.js interface.",
     tags: ["Next.js", "Tailwind CSS"],
     link: "#",

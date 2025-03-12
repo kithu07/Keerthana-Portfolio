@@ -92,7 +92,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="text-lg font-semibold mb-1">Email</h4>
-                  <p className="text-gray-300">hello@example.com</p>
+                  <p className="text-gray-300">dskithu07@gmail.com</p>
                 </div>
               </div>
 
@@ -102,7 +102,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="text-lg font-semibold mb-1">Phone</h4>
-                  <p className="text-gray-300">+1 (555) 123-4567</p>
+                  <p className="text-gray-300">+91 9496534966</p>
                 </div>
               </div>
 
@@ -112,7 +112,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="text-lg font-semibold mb-1">Location</h4>
-                  <p className="text-gray-300">San Francisco, CA</p>
+                  <p className="text-gray-300">Kochi, Kerala</p>
                 </div>
               </div>
             </div>
@@ -121,28 +121,21 @@ export default function Contact() {
               <h3 className="text-xl font-bold mb-4">Connect With Me</h3>
               <div className="flex gap-4">
                 <a
-                  href="#"
+                  href="https://github.com/kithu07"
                   className="p-3 rounded-full bg-gray-800 text-white hover:bg-purple-900/70 transition-colors"
                   aria-label="GitHub"
                 >
                   <Github className="h-5 w-5" />
                 </a>
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/in/keerthana-ds07/"
                   className="p-3 rounded-full bg-gray-800 text-white hover:bg-purple-900/70 transition-colors"
                   aria-label="LinkedIn"
                 >
                   <Linkedin className="h-5 w-5" />
                 </a>
                 <a
-                  href="#"
-                  className="p-3 rounded-full bg-gray-800 text-white hover:bg-purple-900/70 transition-colors"
-                  aria-label="Twitter"
-                >
-                  <Twitter className="h-5 w-5" />
-                </a>
-                <a
-                  href="#"
+                  href="https://www.instagram.com/keerthanaa_ds/"
                   className="p-3 rounded-full bg-gray-800 text-white hover:bg-purple-900/70 transition-colors"
                   aria-label="Instagram"
                 >

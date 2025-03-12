@@ -50,9 +50,10 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.2 }}
-          className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-cyan-400 to-purple-500"
+          className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-[1.3] pb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-cyan-400 to-purple-500"
+
         >
-          <span ref={textRef}>Creative Digital Solutions</span>
+          <span ref={textRef}>Building, Leading, Creating</span>
           <span className="animate-blink">|</span>
         </motion.h1>
 

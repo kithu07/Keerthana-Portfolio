@@ -6,39 +6,32 @@ import { Award, Briefcase, GraduationCap, Trophy } from "lucide-react"
 
 const timelineItems = [
   {
-    year: "2023",
-    title: "Design Excellence Award",
-    description: "Recognized for outstanding UI/UX design in the annual Digital Design Awards.",
+    year: "2024",
+    title: "Google WE’24 Scholar (Offered by TalentSprint)",
+    description: "Selected among the top 1% of the 30000+ applicants for the prestigious Women Engineers Program offered by TalentSprint, supported by Google through a 4 tier selection process. WE is a 2 year mentorship program with 100% program scholarship and an additional cash scholarship of Rs 1 Lakh.",
     icon: <Trophy className="h-6 w-6" />,
     color: "purple",
   },
   {
-    year: "2022",
-    title: "Senior UI/UX Designer",
-    description: "Promoted to lead the design team at TechCorp, overseeing all digital product designs.",
+    year: "2024",
+    title: "Co-lead at TinkerHub CUSAT",
+    description: "As a Co-Lead at TinkerHub SOE, I played a pivotal role in fostering a tech-driven community, leading TinkHerHack 3.0, and organizing workshops that empower students in coding, design, and development.",
     icon: <Briefcase className="h-6 w-6" />,
     color: "cyan",
   },
   {
-    year: "2021",
-    title: "Frontend Developer Certification",
-    description: "Completed advanced certification in modern frontend development technologies.",
+    year: "2023",
+    title: "Media Team Member - Team Horizon",
+    description: "Contributed to Team Horizon, CUSAT's premier robotics team, ranking 11th globally and 1st in India at the European Rover Challenge Qualifications '24, and 18th in the finals in Poland.",
     icon: <GraduationCap className="h-6 w-6" />,
     color: "purple",
   },
   {
-    year: "2020",
-    title: "Best Portfolio Website",
-    description: "Won first place in the Creative Portfolios competition for innovative design.",
+    year: "2023",
+    title: "Media Lead - ACES (Association of Computer Science Students)",
+    description: "Led the media team of ACES, handling branding and event promotions. Created engaging visuals that amplified student engagement in tech-related activities and events.",
     icon: <Award className="h-6 w-6" />,
     color: "cyan",
-  },
-  {
-    year: "2019",
-    title: "UI/UX Designer",
-    description: "Started career as a UI/UX designer at DigitalCraft, working on various web and mobile projects.",
-    icon: <Briefcase className="h-6 w-6" />,
-    color: "purple",
   },
 ]
 

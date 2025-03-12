@@ -166,9 +166,7 @@ export default function Skills() {
             <div>
               <h3 className="text-xl font-bold mb-2">Always Learning</h3>
               <p className="text-gray-300">
-                I'm constantly expanding my skillset and staying up-to-date with the latest technologies and design
-                trends. Currently exploring AI-assisted design tools and WebGL animations to create even more immersive
-                experiences.
+              I'm constantly expanding my skill set and staying up-to-date with the latest technologies. Currently diving into backend development, exploring databases, APIs, and server-side architectures to build robust and scalable applications.
               </p>
             </div>
           </div>
