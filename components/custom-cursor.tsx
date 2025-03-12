@@ -6,9 +6,12 @@ import { motion } from "framer-motion"
 export default function CustomCursor() {
   const [position, setPosition] = useState({ x: 0, y: 0 })
   const [isPointer, setIsPointer] = useState(false)
-  const [isVisible, setIsVisible] = useState(false)
+  const [isVisible, setIsVisible] = useState(true)
+  const [isClient, setIsClient] = useState(false)
 
   useEffect(() => {
+    setIsClient(true)
+
     const updatePosition = (e: MouseEvent) => {
       setPosition({ x: e.clientX, y: e.clientY })
 
@@ -37,11 +40,12 @@ export default function CustomCursor() {
     }
   }, [])
 
-  if (typeof window === "undefined") return null
+  if (!isClient) return null
 
   return (
     <>
       <motion.div
+        suppressHydrationWarning
         className="fixed top-0 left-0 w-8 h-8 rounded-full border-2 border-purple-500 pointer-events-none z-50 mix-blend-difference"
         animate={{
           x: position.x - 16,
@@ -57,6 +61,7 @@ export default function CustomCursor() {
         }}
       />
       <motion.div
+        suppressHydrationWarning
         className="fixed top-0 left-0 w-2 h-2 rounded-full bg-cyan-400 pointer-events-none z-50"
         animate={{
           x: position.x - 4,
@@ -72,4 +77,3 @@ export default function CustomCursor() {
     </>
   )
 }
-
