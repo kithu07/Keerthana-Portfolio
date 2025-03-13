@@ -46,8 +46,8 @@ const projects = [
     image: "/nitekadha.png?height=600&width=800",
     description: "A personalized storytelling app that transforms your search history into an aesthetically beautiful narrative using AI-generated insights and a sleek Next.js interface.",
     tags: ["Next.js", "Tailwind CSS"],
-    link: "#",
-    github: "#"
+    link: "https://ninte-kadhas.vercel.app/",
+    github: "https://github.com/aaagrud/ninte_kadha"
   },
 ]
 
@@ -74,6 +74,22 @@ export default function Projects() {
       transition: { duration: 0.6 },
     },
   }
+
+  const handleCloseModal = () => {
+    setSelectedProject(null);
+  };
+
+  const handleLiveDemoClick = (link: string | undefined) => {
+    if (link) {
+      window.open(link, '_blank');
+    }
+  };
+
+  const handleGitHubClick = (githubLink: string | undefined) => {
+    if (githubLink) {
+      window.open(githubLink, '_blank');
+    }
+  };
 
   return (
     <section id="projects" className="py-20 bg-gradient-to-b from-black via-purple-950/20 to-black">
@@ -181,8 +197,8 @@ export default function Projects() {
               <Button
                 variant="ghost"
                 size="icon"
-                className="absolute top-4 right-4 bg-black/50 hover:bg-black/70 text-white rounded-full"
-                onClick={() => setSelectedProject(null)}
+                className="absolute top-4 right-4 bg-black/50 hover:bg-black/70 text-white rounded-full cursor-pointer"
+                onClick={handleCloseModal}
               >
                 <X className="h-5 w-5" />
               </Button>
@@ -209,10 +225,10 @@ export default function Projects() {
               </div>
 
               <div className="flex gap-4">
-                <Button className="bg-purple-600 hover:bg-purple-700">
+                <Button className="bg-purple-600 hover:bg-purple-700" onClick={() => handleLiveDemoClick(selectedProject.link)}>
                   <ExternalLink className="mr-2 h-4 w-4" /> Live Demo
                 </Button>
-                <Button variant="outline" className="border-purple-500 text-purple-400 hover:bg-purple-950/50">
+                <Button variant="outline" className="border-purple-500 text-purple-400 hover:bg-purple-950/50" onClick={() => handleGitHubClick(selectedProject.github)}>
                   <Github className="mr-2 h-4 w-4" /> View Code
                 </Button>
               </div>
