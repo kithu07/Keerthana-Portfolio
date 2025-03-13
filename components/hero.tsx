@@ -30,6 +30,14 @@ export default function Hero() {
     }, 1000)
   }, [])
 
+  const handleViewWorkClick = () => {
+    window.open("https://github.com/kithu07", "_blank"); 
+  };
+
+  const handleViewResumeClick = () => {
+    window.open("https://drive.google.com/file/d/1L_4eazBIRR5KmV9QCaKdu2_1Ypu6KwNJ/view?usp=drive_link", "_blank"); 
+  };
+
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center pt-16">
       <Navbar />
@@ -73,11 +81,11 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="flex flex-col sm:flex-row gap-4"
         >
-          <Button className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-6">
+          <Button className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-6" onClick={handleViewWorkClick}>
             View My Work <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
-          <Button variant="outline" className="border-purple-500 text-purple-400 hover:bg-purple-950/50 px-6 py-6">
-            Download Resume <Download className="ml-2 h-4 w-4" />
+          <Button variant="outline" className="border-purple-500 text-purple-400 hover:bg-purple-950/50 px-6 py-6" onClick={handleViewResumeClick}>
+            View Resume <Download className="ml-2 h-4 w-4" />
           </Button>
         </motion.div>
       </div>
