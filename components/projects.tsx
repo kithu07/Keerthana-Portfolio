@@ -224,7 +224,7 @@ export default function Projects() {
               >
                 <X className="h-5 w-5" />
               </Button>
-              <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent pointer-events-none"></div>
             </div>
 
             <div className="p-6">
