@@ -21,13 +21,14 @@ const projects = [
   },
   {
     id: 2,
-    title: "RescueChain",
-    category: "Web & Mobile App",
-    image: "/rescue.png?height=600&width=800",
-    description: "A disaster management platform connecting donors, volunteers, and relief camps with real-time updates, resource tracking, and transparent donation systems. Designed user-friendly interfaces and streamlined volunteer role assignment.",
-    tags: ["Python", "HTML5", "CSS3", "Bootstrap", "Firebase", "FastAPI", "JavaScript", "Figma"],
-    link: "#",
-    github: "https://github.com/kithu07/RescueChain"
+    title: "Ninte-Kadha",
+    category: "Web App",
+    image: "/nitekadha.png?height=600&width=800",
+    description: "A personalized storytelling app that transforms your search history into an aesthetically beautiful narrative using AI-generated insights and a sleek Next.js interface.",
+    tags: ["Next.js", "Tailwind CSS"],
+    link: "https://ninte-kadhas.vercel.app/",
+    github: "https://github.com/aaagrud/ninte_kadha"
+    
   },
   {
     id: 3,
@@ -41,13 +42,34 @@ const projects = [
   },
   {
     id: 4,
-    title: "Ninte-Kadha",
+    title: "Premikoo",
     category: "Web App",
-    image: "/nitekadha.png?height=600&width=800",
-    description: "A personalized storytelling app that transforms your search history into an aesthetically beautiful narrative using AI-generated insights and a sleek Next.js interface.",
-    tags: ["Next.js", "Tailwind CSS"],
-    link: "https://ninte-kadhas.vercel.app/",
-    github: "https://github.com/aaagrud/ninte_kadha"
+    image: "/premikoo.png?height=600&width=800",
+    description: "Premikoo is a fun, interactive Valentine's Day-themed website that lets users generate their Love Resume, predict their romantic future, and test their relationship compatibility through an engaging quiz.",
+    tags: ["React", "Tailwind CSS", "Groq"],
+    link: "https://lucky-hotteok-464fb7.netlify.app/",
+    github: "https://github.com/ThePyWizard/thatcringeproject"
+    
+  },
+  {
+    id: 5,
+    title: "RescueChain",
+    category: "Web App",
+    image: "/rescue.png?height=600&width=800",
+    description: "A disaster management platform connecting donors, volunteers, and relief camps with real-time updates, resource tracking, and transparent donation systems. Designed user-friendly interfaces and streamlined volunteer role assignment.",
+    tags: ["Python", "HTML5", "CSS3", "Bootstrap", "Firebase", "FastAPI", "JavaScript", "Figma"],
+    link: "#",
+    github: "https://github.com/kithu07/RescueChain"
+  },
+  {
+    id: 6,
+    title: "TickTockTask",
+    category: "Web & Mobile App",
+    image: "/ticktock.png?height=600&width=800",
+    description: "TickTockTask is a mobile app designed to help you beat procrastination by combining a traditional alarm clock with engaging mini-games. ",
+    tags: ["React native" , "React navigation"],
+    link: "#",
+    github: "https://github.com/kithu07/Procrastinators-Alarm"
   },
 ]
 
