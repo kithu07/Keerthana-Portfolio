@@ -25,9 +25,9 @@ const projects = [
     category: "Web App",
     image: "/nitekadha.png?height=600&width=800",
     description: "A personalized storytelling app that transforms your search history into an aesthetically beautiful narrative using AI-generated insights and a sleek Next.js interface.",
-    tags: ["Next.js", "Tailwind CSS"],
-    link: "https://ninte-kadhas.vercel.app/",
-    github: "https://github.com/aaagrud/ninte_kadha"
+    tags: ["Next.js", "Tailwind CSS", "Node.js", "Express.js", "GeminiAPI"],
+    link: "https://ninte-kadha-frontend.vercel.app/",
+    github: "https://github.com/kithu07/ninte-kadha-backend"
     
   },
   {
@@ -37,7 +37,7 @@ const projects = [
     image: "/evod.png?height=600&width=800",
     description: "A 2D platformer game where players evolve through different stages while collecting coins and avoiding obstacles. Designed UI, implemented scoring systems, seamless navigation, and integrated immersive sound effects.",
     tags    : ["Lua", "LOVE2D", "Tiled", "GIT"],
-    link: "#",
+    link: "https://drive.google.com/file/d/1-RgOGPpiP6-XdbJuyUrfocmKvXcQb8Fy/view?usp=sharing",
     github: "https://gitlab.com/helloworld4324028/evolutionodyssey"
   },
   {
