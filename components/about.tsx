@@ -46,7 +46,7 @@ export default function About() {
             <Card className="relative bg-gray-900 border-0 overflow-hidden">
               <CardContent className="p-0">
                 <Image
-                  src="/keerthana.jpg?height=600&width=600"
+                  src="/keerthana.jpeg?height=600&width=600"
                   alt="Profile"
                   width={600}
                   height={600}
