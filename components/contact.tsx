@@ -1,7 +1,6 @@
 "use client"
 
 import type React from "react"
-
 import { useState } from "react"
 import { motion } from "framer-motion"
 import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter, Instagram } from "lucide-react"
@@ -9,6 +8,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { useToast } from "@/hooks/use-toast"
+import emailjs from "emailjs-com"
 
 export default function Contact() {
   const { toast } = useToast()
@@ -29,20 +29,39 @@ export default function Contact() {
     e.preventDefault()
     setIsSubmitting(true)
 
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false)
-      toast({
-        title: "Message sent!",
-        description: "Thanks for reaching out. I'll get back to you soon.",
+    // Replace these with your EmailJS credentials
+    const serviceID = "service_1vcb72h"
+    const templateID = "template_62q6p87"
+    const userID = "3-Gx0twW3kQZmORtx"
+
+    emailjs
+      .send(serviceID, templateID, formData, userID)
+      .then(
+        (response) => {
+          console.log("Email sent successfully!", response)
+          toast({
+            title: "Message sent!",
+            description: "Thanks for reaching out. I'll get back to you soon.",
+          })
+          setFormData({
+            name: "",
+            email: "",
+            subject: "",
+            message: "",
+          })
+        },
+        (error) => {
+          console.error("Failed to send email:", error)
+          toast({
+            title: "Error",
+            description: "Something went wrong. Please try again later.",
+            variant: "destructive",
+          })
+        }
+      )
+      .finally(() => {
+        setIsSubmitting(false)
       })
-      setFormData({
-        name: "",
-        email: "",
-        subject: "",
-        message: "",
-      })
-    }, 1500)
   }
 
   return (
@@ -238,4 +257,3 @@ export default function Contact() {
     </section>
   )
 }
-
