@@ -11,13 +11,13 @@ import { ExternalLink, Github, X } from "lucide-react"
 const projects = [
   {
     id: 1,
-    title: "PixelPerfect",
-    category: "Web Development",
-    image: "/pixel.png?height=600&width=800",
-    description: "An AI-powered UI testing platform featuring A/B testing, color contrast optimization, and real-time metric visualization. Built a dynamic frontend dashboard using Chart.js and integrated Gemini for intelligent UI insights.",
-    tags: ["HTML", "CSS", "JavaScript", "Bootstrap", "Chart.js", "Firebase", "Node", "Express", "Gemini"],
-    link: "#",
-    github: "https://github.com/sachin136631/PixelPerfect"
+    title: "Arcade App",
+    category: "Web App",
+    image: "/arcade-room.png?height=600&width=800",
+    description: "A dynamic and responsive leaderboard system for arcade games with player and volunteer login, QR-based score submission, and real-time updates — built using Next.js and MongoDB Atlas.",
+    tags: ["Next.js", "Tailwind CSS", "MongoDB Atlas", "React", "QR Scanner"],
+    link: "https://vibhava-arcade.vercel.app/",
+    github: "https://github.com/kithu07/vibhava-arcade"
   },
   {
     id: 2,
@@ -53,6 +53,16 @@ const projects = [
   },
   {
     id: 5,
+    title: "PixelPerfect",
+    category: "Web Development",
+    image: "/pixel.png?height=600&width=800",
+    description: "An AI-powered UI testing platform featuring A/B testing, color contrast optimization, and real-time metric visualization. Built a dynamic frontend dashboard using Chart.js and integrated Gemini for intelligent UI insights.",
+    tags: ["HTML", "CSS", "JavaScript", "Bootstrap", "Chart.js", "Firebase", "Node", "Express", "Gemini"],
+    link: "#",
+    github: "https://github.com/sachin136631/PixelPerfect"
+  },
+  {
+    id: 6,
     title: "RescueChain",
     category: "Web App",
     image: "/rescue.png?height=600&width=800",
@@ -60,16 +70,6 @@ const projects = [
     tags: ["Python", "HTML5", "CSS3", "Bootstrap", "Firebase", "FastAPI", "JavaScript", "Figma"],
     link: "#",
     github: "https://github.com/kithu07/RescueChain"
-  },
-  {
-    id: 6,
-    title: "TickTockTask",
-    category: "Web & Mobile App",
-    image: "/ticktock.png?height=600&width=800",
-    description: "TickTockTask is a mobile app designed to help you beat procrastination by combining a traditional alarm clock with engaging mini-games. ",
-    tags: ["React native" , "React navigation"],
-    link: "#",
-    github: "https://github.com/kithu07/Procrastinators-Alarm"
   },
 ]
 

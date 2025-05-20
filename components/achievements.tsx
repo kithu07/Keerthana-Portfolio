@@ -6,6 +6,13 @@ import { Award, Briefcase, GraduationCap, Trophy } from "lucide-react"
 
 const timelineItems = [
   {
+  year: "2025",
+  title: "Vice Chairperson at ACES, CUSAT",
+  description: "Elected as the Vice Chairperson of the Association of Computer Engineering Students (ACES), where I actively contribute to organizing academic, technical, and cultural initiatives that enrich the student community at CUSAT.",
+  icon: <Briefcase className="h-6 w-6" />,
+  color: "cyan",
+  },
+  {
     year: "2024",
     title: "Google WE’24 Scholar (Offered by TalentSprint)",
     description: "Selected among the top 1% of the 30000+ applicants for the prestigious Women Engineers Program offered by TalentSprint, supported by Google through a 4 tier selection process. WE is a 2 year mentorship program with 100% program scholarship and an additional cash scholarship of Rs 1 Lakh.",
@@ -25,14 +32,7 @@ const timelineItems = [
     description: "Contributed to Team Horizon, CUSAT's premier robotics team, ranking 11th globally and 1st in India at the European Rover Challenge Qualifications '24, and 18th in the finals in Poland.",
     icon: <GraduationCap className="h-6 w-6" />,
     color: "purple",
-  },
-  {
-    year: "2023",
-    title: "Media Lead - ACES (Association of Computer Science Students)",
-    description: "Led the media team of ACES, handling branding and event promotions. Created engaging visuals that amplified student engagement in tech-related activities and events.",
-    icon: <Award className="h-6 w-6" />,
-    color: "cyan",
-  },
+  }
 ]
 
 export default function Achievements() {

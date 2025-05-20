@@ -35,7 +35,7 @@ export default function Hero() {
   };
 
   const handleViewResumeClick = () => {
-    window.open("https://drive.google.com/file/d/1_l1VeeTN394gMjTO3W8chgn9YtLwRVy8/view?usp=sharing", "_blank"); 
+    window.open("https://drive.google.com/file/d/1g7VG5W0NYh_6STXzfsIzcnJqEevgkgMf/view?usp=drive_link", "_blank"); 
   };
 
   return (
