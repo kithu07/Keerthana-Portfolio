@@ -12,7 +12,7 @@ const skills = [
       { name: "HTML", level: 95 },
       { name: "React", level: 75 },
       { name: "Next.js", level: 85 },
-      { name: "TypeScript", level: 80 },
+      { name: "Vue.js", level: 70 },
       { name: "Tailwind CSS", level: 90 },
       { name: "Javascript", level: 90 },
     ],
@@ -33,7 +33,7 @@ const skills = [
     items: [
       { name: "Node.js", level: 85 },
       { name: "MySQL", level: 90 },
-      { name: "MongoDB", level: 85 },
+      { name: "MongoDB", level: 75 },
       { name: "C++", level: 95 },
       { name: "Java", level: 90},
       { name: "C", level: 90 },
@@ -44,11 +44,11 @@ const skills = [
     category: "Soft Skills",
     icon: <Layers className="h-8 w-8 text-cyan-400" />,
     items: [
-        { "name": "Leadership", "level": 95 },
+        { "name": "Leadership", "level": 100 },
         { "name": "Effective Communication", "level": 95 },
-        { "name": "Team Collaboration", "level": 95 },
+        { "name": "Team Collaboration", "level": 100 },
         { "name": "Event Planning and Management", "level": 95 },
-        { "name": "Strong Commitment", "level": 95 },
+        { "name": "Strong Commitment", "level": 100 },
     ],
   },
 ]
