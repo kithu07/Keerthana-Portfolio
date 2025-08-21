@@ -71,10 +71,14 @@ export default function About() {
             </div>
 
             <p className="text-gray-300 text-lg">
-            Hey, I’m Keerthana! A passionate tech innovator, problem solver, and creative mind, 
-            I’m pursuing Computer Science at CUSAT while honing my skills as a Google WE'24 scholar 
-            (offered by TalentSprint). With a solid foundation in web development, programming, and 
-            graphic design, I thrive at the intersection of technology and creativity.
+            Hi, I’m Keerthana!
+             I’m a Computer Science undergraduate at CUSAT and a Google WE’24 Scholar
+             (TalentSprint), passionate about building impactful solutions at the crossroads of
+              technology and creativity. With hands-on experience in full-stack development, 
+              data analytics projects, and emerging technologies like Generative AI, I bring a 
+              strong problem-solving mindset and a drive to innovate. Beyond coding, my 
+              background in graphic design allows me to blend technical depth with creative flair, 
+              making me equally comfortable in engineering solutions and presenting them with clarity.
             </p>
 
             <p className="text-gray-300 text-lg">
@@ -84,10 +88,11 @@ export default function About() {
             </p>
 
             <div className="flex flex-wrap gap-2 pt-4">
-              <Badge className="bg-purple-900/60 hover:bg-purple-800 text-purple-200 px-3 py-1">UI/UX Design</Badge>
               <Badge className="bg-cyan-900/60 hover:bg-cyan-800 text-cyan-200 px-3 py-1">Web Development</Badge>
-              <Badge className="bg-purple-900/60 hover:bg-purple-800 text-purple-200 px-3 py-1">Graphic Design</Badge>
-              <Badge className="bg-purple-900/60 hover:bg-purple-800 text-purple-200 px-3 py-1">Mobile App Development</Badge>
+              <Badge className="bg-purple-900/60 hover:bg-purple-800 text-purple-200 px-3 py-1">GenAI</Badge>
+              <Badge className="bg-cyan-900/60 hover:bg-cyan-800 text-cyan-200 px-3 py-1">UI/UX Design</Badge>
+              <Badge className="bg-purple-900/60 hover:bg-purple-800 text-purple-200 px-3 py-1">Data Analytics</Badge>
+              <Badge className="bg-cyan-900/60 hover:bg-cyan-800 text-cyan-200 px-3 py-1">Graphic Design</Badge>
             </div>
           </motion.div>
         </motion.div>
