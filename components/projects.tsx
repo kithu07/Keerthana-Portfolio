@@ -10,6 +10,36 @@ import { ExternalLink, Github, X } from "lucide-react"
 
 const projects = [
   {
+    id: 9,
+    title: "Finance Settlement Automation for KMRL",
+    category: "Data Analytics",
+    image: "/kmrl.png?height=600&width=800",
+    description: "Developed a PyQt-based desktop application to automate financial settlement by processing AFC logs and daily reports. Streamlined data ingestion, ambiguity resolution, and pattern analysis using Pandas, significantly reducing manual intervention and improving operational efficiency.",
+    tags: ["Python", "PyQt", "Pandas", "Data Processing", "Automation"],
+    link: "",
+    github: ""
+  },
+  {
+    id: 8,
+    title: "ONES Platform Revamp (Admin + Student)",
+    category: "Web & Desktop App",
+    image: "/ONES.png?height=600&width=800",
+    description: "Led the revamp of ONES (EdTech Startup) platform, covering both the Admin Dashboard and Student Website. Improved usability, responsiveness, and UI consistency across the system.",
+    tags: ["Vue.js", "Next.js", "Tailwind CSS", "REST APIs", "Django", "Postgress", "HTML", "CSS", "GitHub"],
+    link: "",
+    github: ""
+  },
+  {
+    id: 7,
+    title: "Mindathe Irikk",
+    category: "Chrome Extension",
+    image: "/mindathe-irikk.png?height=600&width=800",
+    description: "A sassy Mallu sound guardian for movie nights — this Chrome extension uses the Web Audio API to detect noise levels and respond with sarcastic Kerala-style audio warnings. Built with JavaScript, HTML, and CSS under Web Extensions Manifest V3.",
+    tags: ["JavaScript", "HTML", "CSS", "Web Audio API", "Chrome Extensions"],
+    link: "https://mindaathe-irikku.vercel.app/",
+    github: "https://github.com/kithu07/mindathe-irikK"
+  },
+  {
     id: 1,
     title: "Arcade App",
     category: "Web App",
@@ -22,7 +52,7 @@ const projects = [
   {
     id: 2,
     title: "Ninte-Kadha",
-    category: "Web App",
+    category: "GenAI",
     image: "/nitekadha.png?height=600&width=800",
     description: "A personalized storytelling app that transforms your search history into an aesthetically beautiful narrative using AI-generated insights and a sleek Next.js interface.",
     tags: ["Next.js", "Tailwind CSS", "Node.js", "Express.js", "GeminiAPI"],
@@ -43,7 +73,7 @@ const projects = [
   {
     id: 4,
     title: "Premikoo",
-    category: "Web App",
+    category: "GenAI",
     image: "/premikoo.png?height=600&width=800",
     description: "Premikoo is a fun, interactive Valentine's Day-themed website that lets users generate their Love Resume, predict their romantic future, and test their relationship compatibility through an engaging quiz.",
     tags: ["React", "Tailwind CSS", "Groq"],
@@ -58,7 +88,7 @@ const projects = [
     image: "/pixel.png?height=600&width=800",
     description: "An AI-powered UI testing platform featuring A/B testing, color contrast optimization, and real-time metric visualization. Built a dynamic frontend dashboard using Chart.js and integrated Gemini for intelligent UI insights.",
     tags: ["HTML", "CSS", "JavaScript", "Bootstrap", "Chart.js", "Firebase", "Node", "Express", "Gemini"],
-    link: "#",
+    link: "",
     github: "https://github.com/sachin136631/PixelPerfect"
   },
   {
@@ -68,7 +98,7 @@ const projects = [
     image: "/rescue.png?height=600&width=800",
     description: "A disaster management platform connecting donors, volunteers, and relief camps with real-time updates, resource tracking, and transparent donation systems. Designed user-friendly interfaces and streamlined volunteer role assignment.",
     tags: ["Python", "HTML5", "CSS3", "Bootstrap", "Firebase", "FastAPI", "JavaScript", "Figma"],
-    link: "#",
+    link: "",
     github: "https://github.com/kithu07/RescueChain"
   },
 ]
