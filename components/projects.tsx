@@ -105,8 +105,11 @@ const projects = [
 
 export default function Projects() {
   const [selectedProject, setSelectedProject] = useState<null | (typeof projects)[0]>(null)
+  const [showAll, setShowAll] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
   const isInView = useInView(ref, { once: true, amount: 0.1 })
+  
+  const visibleProjects = showAll ? projects : projects.slice(0, 4)
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -182,7 +185,7 @@ export default function Projects() {
           variants={containerVariants}
           className="grid grid-cols-1 md:grid-cols-2 gap-8"
         >
-          {projects.map((project) => (
+          {visibleProjects.map((project) => (
             <motion.div key={project.id} variants={itemVariants}>
               <Card
                 className="group bg-gray-900/50 border border-gray-800 hover:border-purple-500/50 overflow-hidden transition-all duration-300 hover:shadow-[0_0_15px_rgba(168,85,247,0.3)]"
@@ -196,7 +199,7 @@ export default function Projects() {
                       fill
                       className="object-cover transition-transform duration-700 group-hover:scale-110"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/90 to-transparent opacity-90"></div>
                   </div>
 
                   <div className="absolute bottom-0 left-0 right-0 p-6 transform transition-transform duration-300">
@@ -223,6 +226,22 @@ export default function Projects() {
             </motion.div>
           ))}
         </motion.div>
+
+        {projects.length > 4 && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 }}
+            className="flex justify-center mt-12"
+          >
+            <Button
+              onClick={() => setShowAll(!showAll)}
+              className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-2 rounded-full"
+            >
+              {showAll ? 'Show Less' : 'View More'}
+            </Button>
+          </motion.div>
+        )}
       </div>
 
       {/* Project Modal */}
@@ -277,12 +296,16 @@ export default function Projects() {
               </div>
 
               <div className="flex gap-4">
-                <Button className="bg-purple-600 hover:bg-purple-700" onClick={() => handleLiveDemoClick(selectedProject.link)}>
-                  <ExternalLink className="mr-2 h-4 w-4" /> Live Demo
-                </Button>
-                <Button variant="outline" className="border-purple-500 text-purple-400 hover:bg-purple-950/50" onClick={() => handleGitHubClick(selectedProject.github)}>
-                  <Github className="mr-2 h-4 w-4" /> View Code
-                </Button>
+                {selectedProject.link && (
+                  <Button className="bg-purple-600 hover:bg-purple-700" onClick={() => handleLiveDemoClick(selectedProject.link)}>
+                    <ExternalLink className="mr-2 h-4 w-4" /> Live Demo
+                  </Button>
+                )}
+                {selectedProject.github && (
+                  <Button variant="outline" className="border-purple-500 text-purple-400 hover:bg-purple-950/50" onClick={() => handleGitHubClick(selectedProject.github)}>
+                    <Github className="mr-2 h-4 w-4" /> View Code
+                  </Button>
+                )}
               </div>
             </div>
           </motion.div>
