@@ -6,28 +6,28 @@ import { Award, Briefcase, GraduationCap, Trophy } from "lucide-react"
 
 const timelineItems = [
   {
-  year: "2025",
+    year: "2024 - Present ",
+    title: "Google WE’24 Scholar (Offered by TalentSprint)",
+    description: "Selected among the top 1% of the 30000+ applicants for the prestigious Women Engineers Program offered by TalentSprint, supported by Google through a 4 tier selection process. WE is a 2 year mentorship program with 100% program scholarship and an additional cash scholarship of Rs 1 Lakh.",
+    icon: <Trophy className="h-6 w-6" />,
+    color: "purple",
+  },
+   {
+    year: "2025 - Present",
+    title: "Lead at TinkerHub CUSAT",
+    description: "As a Lead at TinkerHub SOE, I played a pivotal role in fostering a tech-driven community, leading Hackathons, and organizing workshops that empower students in coding, design, and development.",
+    icon: <Briefcase className="h-6 w-6" />,
+    color: "cyan",
+  },
+  {
+  year: "2023 - Present",
   title: "Vice Chairperson at ACES, CUSAT",
   description: "Elected as the Vice Chairperson of the Association of Computer Engineering Students (ACES), where I actively contribute to organizing academic, technical, and cultural initiatives that enrich the student community at CUSAT.",
   icon: <Briefcase className="h-6 w-6" />,
   color: "cyan",
   },
   {
-    year: "2024",
-    title: "Google WE’24 Scholar (Offered by TalentSprint)",
-    description: "Selected among the top 1% of the 30000+ applicants for the prestigious Women Engineers Program offered by TalentSprint, supported by Google through a 4 tier selection process. WE is a 2 year mentorship program with 100% program scholarship and an additional cash scholarship of Rs 1 Lakh.",
-    icon: <Trophy className="h-6 w-6" />,
-    color: "purple",
-  },
-  {
-    year: "2024",
-    title: "Co-lead at TinkerHub CUSAT",
-    description: "As a Co-Lead at TinkerHub SOE, I played a pivotal role in fostering a tech-driven community, leading TinkHerHack 3.0, and organizing workshops that empower students in coding, design, and development.",
-    icon: <Briefcase className="h-6 w-6" />,
-    color: "cyan",
-  },
-  {
-    year: "2023",
+    year: "2023 - 2025",
     title: "Media Team Member - Team Horizon",
     description: "Contributed to Team Horizon, CUSAT's premier robotics team, ranking 11th globally and 1st in India at the European Rover Challenge Qualifications '24, and 18th in the finals in Poland.",
     icon: <GraduationCap className="h-6 w-6" />,
