@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 import Image from "next/image"
 import Link from "next/link"
 import { projects } from "@/lib/data"
-import { ArrowUpRight } from "lucide-react"
+import { ArrowUpRight, ArrowRight } from "lucide-react"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 
@@ -19,7 +19,14 @@ export default function Projects() {
   const cardsContainerRef = useRef<HTMLDivElement>(null)
   const cardRefs = useRef<(HTMLDivElement | null)[]>([])
 
-  const displayedProjects = projects.slice(0, 5)
+  // Top 4 specific projects requested by user
+  // kmrl, adsage, nintekadha, evolution odyssey
+  const topProjectsIds = ["finance-settlement-automation", "adsage", "ninte-kadha", "evolution-odyssey"];
+
+  const displayedProjects = topProjectsIds
+    .map(id => projects.find(p => p.id === id))
+    .filter(Boolean) as typeof projects;
+
 
   useEffect(() => {
     if (typeof window === "undefined") return
@@ -102,7 +109,7 @@ export default function Projects() {
     return () => {
       ScrollTrigger.getAll().forEach((st) => st.kill())
     }
-  }, [])
+  }, [displayedProjects]) // Add dependency
 
   return (
     <section
@@ -136,10 +143,17 @@ export default function Projects() {
               viewport={{ once: true }}
               className="text-slate-400 max-w-xl text-xl leading-relaxed mb-8"
             >
-              Scroll to build the stack. Each project piles up as you explore my work.
+              A selection of my recent works.
             </motion.p>
 
-            <div className="flex gap-4">
+            <Link href="/projects">
+              <button className="group relative inline-flex items-center gap-2 px-8 py-4 bg-white/5 hover:bg-white/10 text-white rounded-full backdrop-blur-md border border-white/10 transition-all hover:scale-105">
+                <span className="font-semibold">View Complete Gallery</span>
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </button>
+            </Link>
+
+            <div className="flex gap-4 mt-8">
               <div className="flex items-center gap-2">
                 <span className="w-3 h-3 rounded-full bg-pink-500 animate-pulse"></span>
                 <span className="text-sm text-pink-400">Scroll Driven</span>
@@ -161,7 +175,7 @@ export default function Projects() {
               <div
                 key={project.id}
                 ref={(el) => { cardRefs.current[index] = el }}
-                className="absolute w-full max-w-md h-[380px] rounded-2xl overflow-hidden border border-white/10 shadow-2xl cursor-pointer group bg-slate-900"
+                className="absolute w-full max-w-md h-[420px] rounded-2xl overflow-hidden border border-white/10 shadow-2xl cursor-pointer group bg-slate-900"
                 style={{ transformStyle: "preserve-3d" }}
               >
                 <Link href={`/projects/${project.id}`} className="block h-full w-full relative">

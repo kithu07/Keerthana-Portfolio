@@ -69,25 +69,21 @@ export default function Hero() {
           className="flex flex-col items-center gap-8 pointer-events-auto"
         >
           <div className="flex flex-col sm:flex-row gap-4">
-            <button
-              data-cal-namespace="15min"
-              data-cal-link="keerthana/15min"
-              data-cal-config='{"layout":"month_view"}'
+            <Link
+              href="#contact"
               className="px-8 py-4 rounded-full bg-white text-black font-bold hover:bg-slate-200 transition-colors flex items-center justify-center gap-2 group shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.5)]"
             >
               <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
               Book a 15 min Call
               <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-            </button>
+            </Link>
 
-            <a
-              href="https://drive.google.com/file/d/1uQYx7iO66J_Yj2kTtXg7cU7n9qn6T3xx/view?usp=drive_link"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/resume"
               className="px-8 py-4 rounded-full bg-white/5 border border-white/10 text-white font-semibold hover:bg-white/10 transition-colors flex items-center justify-center gap-2"
             >
               Resume
-            </a>
+            </Link>
           </div>
 
           <motion.a

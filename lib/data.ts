@@ -19,6 +19,19 @@ export const projects = [
         images: ["/kmrl.png?height=600&width=800"]
     },
     {
+        id: "adsage",
+        title: "AdSage",
+        category: "Marketing Tech",
+        image: "/adsage.png?height=600&width=800",
+        description: "An AI-powered ad optimization platform.",
+        detailedDescription: "AdSage utilizes advanced machine learning to analyze and optimize advertising campaigns in real-time. It provides actionable insights to improve ROI and engagement.",
+        features: ["AI Ad Analysis", "Real-time Optimization", "ROI Dashboard"],
+        tags: ["AI", "Marketing", "Optimization"],
+        link: "",
+        github: "",
+        images: ["/adsage.png?height=600&width=800"]
+    },
+    {
         id: "ones-platform-revamp",
         title: "ONES Platform Revamp",
         category: "Web & Desktop App",

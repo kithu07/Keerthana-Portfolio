@@ -79,6 +79,12 @@ export default function Navbar() {
               )}
             </Link>
           ))}
+          <Link
+            href="/resume"
+            className="px-5 py-2 bg-white/10 hover:bg-white/20 border border-white/10 rounded-full text-white text-sm font-medium transition-all hover:scale-105"
+          >
+            Resume
+          </Link>
         </nav>
 
         {/* Mobile Toggle */}
@@ -110,6 +116,13 @@ export default function Navbar() {
                   {item.name}
                 </Link>
               ))}
+              <Link
+                href="/resume"
+                className="text-lg text-pink-500 font-medium transition-colors mt-2"
+                onClick={() => setIsOpen(false)}
+              >
+                Resume
+              </Link>
             </div>
           </motion.div>
         )}

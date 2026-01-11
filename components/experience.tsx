@@ -1,86 +1,120 @@
 "use client"
 
 import { useRef } from "react"
-import { motion, useInView } from "framer-motion"
-import { Briefcase, Calendar } from "lucide-react"
+import { motion, useScroll, useTransform } from "framer-motion"
+import { Briefcase } from "lucide-react"
 
 const experiences = [
     {
         role: "Lead",
         org: "TinkerHub CUSAT",
         period: "2025 - Present",
-        description: "Leading the student community to foster technical skills and innovation through workshops and hackathons.",
-        color: "pink",
+        description: "Leading the student community to foster technical skills and innovation through workshops and hackathons. Orchestrating events that bridge the gap between academic learning and industry demands.",
+        skills: ["Leadership", "Community Building", "Mentoring"]
     },
     {
         role: "Vice Chairperson",
         org: "ACES, CUSAT",
         period: "2023 - Present",
-        description: "Organizing academic and cultural events for the Computer Science department, bridging the gap between students and industry.",
-        color: "blue",
+        description: "Organizing flagship academic and cultural events for the Computer Science department. Managing cross-functional teams and budget allocation for departmental activities.",
+        skills: ["Event Management", "Team Coordination", "Budget Planning"]
     },
     {
         role: "Media Team Member",
         org: "Team Horizon",
         period: "2023 - 2025",
-        description: "Managed branding and media presence for the university's mars rover team, achieving global recognition.",
-        color: "purple", // Purple acts as a bridge between pink and blue
+        description: "Managed branding and social media presence for the university's award-winning Mars Rover team. Created engaging content that resulted in global recognition and increased sponsorship.",
+        skills: ["Social Media Marketing", "Content Creation", "Branding"]
     }
 ]
 
 export default function Experience() {
-    const ref = useRef<HTMLDivElement>(null)
-    const isInView = useInView(ref, { once: true, amount: 0.2 })
+    const containerRef = useRef<HTMLDivElement>(null)
+    const { scrollYProgress } = useScroll({
+        target: containerRef,
+        offset: ["start end", "end start"]
+    })
+
+    const y = useTransform(scrollYProgress, [0, 1], [100, -100])
 
     return (
-        <section id="experience" className="py-24 relative overflow-hidden">
-            {/* Decor */}
-            <div className="absolute top-0 right-0 w-64 h-64 bg-slate-800/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none" />
+        <section id="experience" className="py-32 relative overflow-hidden bg-slate-950">
+            {/* Background blur */}
+            <div className="absolute top-1/2 left-0 w-96 h-96 bg-purple-900/20 rounded-full blur-[128px] -translate-y-1/2 -translate-x-1/2 pointer-events-none" />
 
-            <div className="container mx-auto px-4 relative z-10">
-                <div className="text-center mb-16">
-                    <motion.h2
+            <div className="container mx-auto px-4 relative z-10" ref={containerRef}>
+                <div className="text-center mb-24">
+                    <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6 }}
                         viewport={{ once: true }}
-                        className="text-3xl md:text-5xl font-bold mb-4"
+                        transition={{ duration: 0.6 }}
                     >
-                        Professional <span className="gradient-text">Experience</span>
-                    </motion.h2>
-                    <div className="h-1 w-20 bg-gradient-to-r from-pink-500 to-blue-500 rounded-full mx-auto" />
+                        <h2 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight">
+                            Professional <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">Journey</span>
+                        </h2>
+                        <p className="text-slate-400 text-lg max-w-2xl mx-auto">
+                            My path of growth, leadership, and technical contribution.
+                        </p>
+                    </motion.div>
                 </div>
 
-                <div ref={ref} className="max-w-4xl mx-auto space-y-8">
-                    {experiences.map((exp, index) => (
-                        <motion.div
-                            key={index}
-                            initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                            animate={isInView ? { opacity: 1, x: 0 } : {}}
-                            transition={{ duration: 0.6, delay: index * 0.2 }}
-                            className="group relative"
-                        >
-                            <div className="absolute inset-0 bg-gradient-to-r from-pink-500/10 to-blue-500/10 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="relative max-w-5xl mx-auto">
+                    {/* Vertical Line */}
+                    <div className="absolute left-[20px] md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-purple-500/50 to-transparent" />
 
-                            <div className="relative p-8 rounded-2xl bg-slate-900/50 border border-white/5 hover:border-white/10 transition-colors backdrop-blur-sm">
-                                <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
-                                    <div>
-                                        <h3 className="text-2xl font-bold text-white group-hover:text-pink-400 transition-colors">
-                                            {exp.role}
-                                        </h3>
-                                        <p className="text-lg text-blue-400 font-medium">{exp.org}</p>
-                                    </div>
-                                    <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/5 text-slate-300 text-sm whitespace-nowrap">
-                                        <Calendar className="h-4 w-4" />
-                                        {exp.period}
+                    <div className="space-y-24">
+                        {experiences.map((exp, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, y: 50 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true, margin: "-100px" }}
+                                transition={{ duration: 0.8, delay: index * 0.1 }}
+                                className={`flex flex-col md:flex-row gap-8 md:gap-16 items-start relative ${index % 2 === 0 ? "md:flex-row-reverse" : ""
+                                    }`}
+                            >
+                                {/* Timeline Dot */}
+                                <div className="absolute left-[20px] md:left-1/2 w-4 h-4 rounded-full bg-slate-950 border-2 border-purple-500 z-10 -translate-x-1/2 mt-1.5 shadow-[0_0_10px_rgba(168,85,247,0.5)]">
+                                    <div className="absolute inset-0 rounded-full bg-purple-500 animate-ping opacity-20" />
+                                </div>
+
+                                {/* Content Side */}
+                                <div className="ml-12 md:ml-0 md:w-1/2 relative">
+                                    <div className={`p-8 rounded-2xl bg-slate-900/40 border border-white/5 hover:border-purple-500/30 transition-all group backdrop-blur-sm shadow-xl ${index % 2 === 0 ? "md:text-left" : "md:text-right"
+                                        }`}>
+                                        {/* Role & Org */}
+                                        <div className={`flex flex-col gap-1 mb-4 ${index % 2 === 0 ? "md:items-start" : "md:items-end"}`}>
+                                            <h3 className="text-2xl font-bold text-white group-hover:text-purple-300 transition-colors">{exp.role}</h3>
+                                            <span className="text-lg text-purple-400 font-medium">{exp.org}</span>
+                                        </div>
+
+                                        {/* Period */}
+                                        <div className={`inline-block px-3 py-1 bg-white/5 rounded-full text-xs font-mono text-slate-300 mb-6 border border-white/5`}>
+                                            {exp.period}
+                                        </div>
+
+                                        {/* Description */}
+                                        <p className="text-slate-400 leading-relaxed mb-6">
+                                            {exp.description}
+                                        </p>
+
+                                        {/* Skills Tags */}
+                                        <div className={`flex flex-wrap gap-2 ${index % 2 === 0 ? "justify-start" : "justify-end"}`}>
+                                            {exp.skills.map((skill, i) => (
+                                                <span key={i} className="text-xs font-semibold px-2 py-1 bg-purple-900/20 text-purple-300 rounded border border-purple-500/20">
+                                                    {skill}
+                                                </span>
+                                            ))}
+                                        </div>
                                     </div>
                                 </div>
-                                <p className="text-slate-400 leading-relaxed max-w-2xl">
-                                    {exp.description}
-                                </p>
-                            </div>
-                        </motion.div>
-                    ))}
+
+                                {/* Empty Space for Layout Balance */}
+                                <div className="hidden md:block md:w-1/2" />
+                            </motion.div>
+                        ))}
+                    </div>
                 </div>
             </div>
         </section>
