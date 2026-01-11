@@ -1,97 +1,136 @@
 "use client"
 
-import { useEffect, useRef } from "react"
+import { useEffect } from "react"
 import { motion } from "framer-motion"
-import Navbar from "@/components/navbar"
-import { Button } from "@/components/ui/button"
-import { ArrowRight, Download } from "lucide-react"
+import { ArrowRight, Github, Linkedin, Mail } from "lucide-react"
+import Link from "next/link"
+import Cubes from "@/components/ui/Cubes"
+import { getCalApi } from "@calcom/embed-react"
 
 export default function Hero() {
-  const textRef = useRef<HTMLHeadingElement>(null)
 
   useEffect(() => {
-    if (!textRef.current) return
-
-    const textElement = textRef.current
-    const text = textElement.innerText
-    textElement.innerText = ""
-
-    let i = 0
-    const typeWriter = () => {
-      if (i < text.length) {
-        textElement.innerText += text.charAt(i)
-        i++
-        setTimeout(typeWriter, 100)
-      }
-    }
-
-    setTimeout(() => {
-      typeWriter()
-    }, 1000)
-  }, [])
-
-  const handleViewWorkClick = () => {
-    window.open("https://github.com/kithu07", "_blank"); 
-  };
-
-  const handleViewResumeClick = () => {
-    window.open("https://drive.google.com/file/d/1g7VG5W0NYh_6STXzfsIzcnJqEevgkgMf/view?usp=drive_link", "_blank"); 
-  };
+    (async function () {
+      const cal = await getCalApi({ "namespace": "15min" });
+      cal("ui", { "styles": { "branding": { "brandColor": "#EC4899" } }, "hideEventTypeDetails": false, "layout": "month_view" });
+    })();
+  }, []);
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center pt-16">
-      <Navbar />
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
 
-      <div className="container mx-auto px-4 py-20 flex flex-col items-center text-center">
+      {/* Cubes Background - More visible now */}
+      <div className="absolute inset-0 z-0 opacity-80">
+        <Cubes
+          gridSize={12}
+          maxAngle={50}
+          radius={4}
+          borderStyle="1px solid rgba(236, 72, 153, 0.4)"
+          faceColor="#0f172a"
+          rippleColor="#ec4899"
+          rippleSpeed={1.5}
+          autoAnimate={true}
+          rippleOnClick={true}
+        />
+      </div>
+
+      {/* Gradient overlay for readability - adjusted to be lighter */}
+      <div className="absolute inset-0 bg-gradient-to-b from-slate-950/30 via-transparent to-slate-950/80 z-[1] pointer-events-none" />
+
+      <div className="container mx-auto px-6 relative z-10 text-center pointer-events-none">
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="mb-4"
+          className="mb-8 pointer-events-auto inline-block" // Confine pointer events to the text block only
         >
-          <span className="inline-block px-3 py-1 text-sm bg-purple-900/50 text-purple-300 rounded-full border border-purple-700">
-            Designer & Developer
-          </span>
+          <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter leading-[1.1] mb-8">
+            <span className="block hover:scale-105 transition-transform duration-500 cursor-default">Building Digital</span>
+            <span className="block gradient-text hover:scale-105 transition-transform duration-500 cursor-default">Experiences</span>
+          </h1>
         </motion.div>
-
-        <motion.h1
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.2 }}
-          className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-[1.3] pb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-cyan-400 to-purple-500"
-
-        >
-          <span ref={textRef}>Building, Leading, Creating</span>
-          <span className="animate-blink">|</span>
-        </motion.h1>
 
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.4 }}
-          className="text-lg md:text-xl text-gray-300 max-w-2xl mb-10"
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="text-xl text-slate-400 max-w-2xl mx-auto mb-12 leading-relaxed pointer-events-auto"
         >
-          I craft visually stunning digital experiences that blend creativity with technical excellence. Specializing in
-          modern web design and development.
+          crafting interfaces that feel distinct, fluid, and alive.
+          <br className="hidden md:block" />
+          specializing in next.js, react, and physics-based interactions.
         </motion.p>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="flex flex-col sm:flex-row gap-4"
+          transition={{ duration: 0.8, delay: 0.5 }}
+          className="flex flex-col items-center gap-8 pointer-events-auto"
         >
-          <Button className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-6" onClick={handleViewWorkClick}>
-            View My Work <ArrowRight className="ml-2 h-4 w-4" />
-          </Button>
-          <Button variant="outline" className="border-purple-500 text-purple-400 hover:bg-purple-950/50 px-6 py-6" onClick={handleViewResumeClick}>
-            View Resume <Download className="ml-2 h-4 w-4" />
-          </Button>
-        </motion.div>
-      </div>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <button
+              data-cal-namespace="15min"
+              data-cal-link="keerthana/15min"
+              data-cal-config='{"layout":"month_view"}'
+              className="px-8 py-4 rounded-full bg-white text-black font-bold hover:bg-slate-200 transition-colors flex items-center justify-center gap-2 group shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.5)]"
+            >
+              <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+              Book a 15 min Call
+              <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+            </button>
 
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-black to-transparent"></div>
+            <a
+              href="https://drive.google.com/file/d/1uQYx7iO66J_Yj2kTtXg7cU7n9qn6T3xx/view?usp=drive_link"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-4 rounded-full bg-white/5 border border-white/10 text-white font-semibold hover:bg-white/10 transition-colors flex items-center justify-center gap-2"
+            >
+              Resume
+            </a>
+          </div>
+
+          <motion.a
+            href="https://github.com/kithu07"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.02 }}
+            className="flex items-center gap-4 p-4 rounded-2xl bg-slate-900/50 border border-white/5 backdrop-blur-sm hover:border-white/20 transition-all group cursor-pointer text-left w-full max-w-sm"
+          >
+            <div className="p-3 rounded-xl bg-slate-800 text-white group-hover:bg-slate-700 transition-colors">
+              <Github className="h-6 w-6" />
+            </div>
+
+            <div className="flex-1">
+              <div className="flex items-center justify-between mb-1">
+                <span className="text-sm font-semibold text-slate-200">GitHub Activity</span>
+              </div>
+
+              {/* Simulated Contribution Graph */}
+              <div className="flex gap-1 h-2 items-end">
+                {[40, 70, 30, 80, 50, 90, 60, 40, 80, 60, 100, 70, 40, 80, 50].map((h, i) => (
+                  <div
+                    key={i}
+                    style={{ height: `${h}%` }}
+                    className="w-1.5 rounded-sm bg-emerald-500/50 group-hover:bg-emerald-400 transition-colors"
+                  />
+                ))}
+              </div>
+              <span className="text-xs text-slate-500 mt-1 block">Check out my contributions</span>
+            </div>
+          </motion.a>
+
+          <div className="flex gap-6 mt-4">
+            <a href="https://www.linkedin.com/in/keerthana-ds07/" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-pink-500 transition-colors">
+              <Linkedin className="h-6 w-6" />
+            </a>
+            <a href="mailto:contact@keerthana.dev" className="text-slate-400 hover:text-blue-500 transition-colors">
+              <Mail className="h-6 w-6" />
+            </a>
+          </div>
+        </motion.div>
+
+      </div>
     </section>
   )
 }
-

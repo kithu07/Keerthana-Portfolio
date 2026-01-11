@@ -29,7 +29,6 @@ export default function Contact() {
     e.preventDefault()
     setIsSubmitting(true)
 
-    // Replace these with your EmailJS credentials
     const serviceID = "service_1vcb72h"
     const templateID = "template_62q6p87"
     const userID = "3-Gx0twW3kQZmORtx"
@@ -75,14 +74,14 @@ export default function Contact() {
             viewport={{ once: true }}
             className="text-3xl md:text-4xl font-bold mb-4"
           >
-            Get In <span className="text-purple-500">Touch</span>
+            Get In <span className="text-pink-500">Touch</span>
           </motion.h2>
           <motion.div
             initial={{ opacity: 0, scale: 0 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="h-1 w-24 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full mx-auto mb-6"
+            className="h-1 w-24 bg-gradient-to-r from-pink-500 to-blue-500 rounded-full mx-auto mb-6"
           ></motion.div>
           <motion.p
             initial={{ opacity: 0 }}
@@ -106,7 +105,7 @@ export default function Contact() {
 
             <div className="space-y-6 mb-8">
               <div className="flex items-start gap-4">
-                <div className="p-3 rounded-lg bg-purple-900/30 text-purple-400">
+                <div className="p-3 rounded-lg bg-pink-900/30 text-pink-400">
                   <Mail className="h-5 w-5" />
                 </div>
                 <div>
@@ -116,7 +115,7 @@ export default function Contact() {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="p-3 rounded-lg bg-purple-900/30 text-purple-400">
+                <div className="p-3 rounded-lg bg-pink-900/30 text-pink-400">
                   <MapPin className="h-5 w-5" />
                 </div>
                 <div>
@@ -131,21 +130,21 @@ export default function Contact() {
               <div className="flex gap-4">
                 <a
                   href="https://github.com/kithu07"
-                  className="p-3 rounded-full bg-gray-800 text-white hover:bg-purple-900/70 transition-colors"
+                  className="p-3 rounded-full bg-gray-800 text-white hover:bg-pink-900/70 transition-colors"
                   aria-label="GitHub"
                 >
                   <Github className="h-5 w-5" />
                 </a>
                 <a
                   href="https://www.linkedin.com/in/keerthana-ds07/"
-                  className="p-3 rounded-full bg-gray-800 text-white hover:bg-purple-900/70 transition-colors"
+                  className="p-3 rounded-full bg-gray-800 text-white hover:bg-pink-900/70 transition-colors"
                   aria-label="LinkedIn"
                 >
                   <Linkedin className="h-5 w-5" />
                 </a>
                 <a
                   href="https://www.instagram.com/keerthanaa_ds/"
-                  className="p-3 rounded-full bg-gray-800 text-white hover:bg-purple-900/70 transition-colors"
+                  className="p-3 rounded-full bg-gray-800 text-white hover:bg-pink-900/70 transition-colors"
                   aria-label="Instagram"
                 >
                   <Instagram className="h-5 w-5" />
@@ -161,7 +160,7 @@ export default function Contact() {
             viewport={{ once: true }}
           >
             <div className="relative">
-              <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-lg opacity-75 blur"></div>
+              <div className="absolute -inset-1 bg-gradient-to-r from-pink-600 to-blue-600 rounded-lg opacity-75 blur"></div>
               <div className="relative bg-gray-900 p-6 rounded-lg border border-gray-800">
                 <h3 className="text-2xl font-bold mb-6">Send Me a Message</h3>
 
@@ -174,7 +173,7 @@ export default function Contact() {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="bg-gray-800/50 border-gray-700 focus:border-purple-500"
+                      className="bg-gray-800/50 border-gray-700 focus:border-pink-500"
                     />
                   </div>
 
@@ -186,7 +185,7 @@ export default function Contact() {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="bg-gray-800/50 border-gray-700 focus:border-purple-500"
+                      className="bg-gray-800/50 border-gray-700 focus:border-pink-500"
                     />
                   </div>
 
@@ -198,7 +197,7 @@ export default function Contact() {
                       value={formData.subject}
                       onChange={handleChange}
                       required
-                      className="bg-gray-800/50 border-gray-700 focus:border-purple-500"
+                      className="bg-gray-800/50 border-gray-700 focus:border-pink-500"
                     />
                   </div>
 
@@ -209,13 +208,13 @@ export default function Contact() {
                       value={formData.message}
                       onChange={handleChange}
                       required
-                      className="bg-gray-800/50 border-gray-700 focus:border-purple-500 min-h-[120px]"
+                      className="bg-gray-800/50 border-gray-700 focus:border-pink-500 min-h-[120px]"
                     />
                   </div>
 
                   <Button
                     type="submit"
-                    className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700"
+                    className="w-full bg-gradient-to-r from-pink-600 to-blue-600 hover:from-pink-700 hover:to-blue-700"
                     disabled={isSubmitting}
                   >
                     {isSubmitting ? (

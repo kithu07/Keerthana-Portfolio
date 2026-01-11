@@ -2,15 +2,17 @@
 
 import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
-import { ChevronDown } from "lucide-react"
 import Hero from "@/components/hero"
 import About from "@/components/about"
-import Projects from "@/components/projects"
+import Experience from "@/components/experience"
 import Skills from "@/components/skills"
+import Projects from "@/components/projects"
 import Achievements from "@/components/achievements"
+import Education from "@/components/education"
 import Contact from "@/components/contact"
 import ParticleBackground from "@/components/particle-background"
 import CustomCursor from "@/components/custom-cursor"
+import Navbar from "@/components/navbar"
 
 export default function Home() {
   const [scrollY, setScrollY] = useState(0)
@@ -25,29 +27,23 @@ export default function Home() {
   }, [])
 
   return (
-    <div className="dark relative min-h-screen overflow-hidden bg-black text-white">
+    <div className="dark relative min-h-screen overflow-hidden bg-slate-950 text-white noise-bg">
       <CustomCursor />
       <ParticleBackground />
+      <Navbar />
 
       <main className="relative z-10">
         <Hero />
-
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: scrollY > 100 ? 0 : 1 }}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center"
-        >
-          <span className="text-sm text-purple-300 mb-2">Scroll to explore</span>
-          <ChevronDown className="animate-bounce text-purple-400" />
-        </motion.div>
-
         <About />
-        <Projects />
+        <Experience />
         <Skills />
+        <Projects />
         <Achievements />
+        <Education />
         <Contact />
       </main>
     </div>
   )
 }
+
 
