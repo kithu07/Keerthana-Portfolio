@@ -6,6 +6,13 @@ import { Briefcase } from "lucide-react"
 
 const experiences = [
     {
+        role: "Software Engineer Intern",
+        org: "Cognifyr.co",
+        period: "May 2025 – June 2025",
+        description: "Full-Stack Development and AI Automation Startup (Remote). Refactored the admin dashboard for ONES (EdTech), improving UI performance and responsiveness for a platform serving 5,000+ active app users using Vue.js and Tailwind CSS. Built the student-facing portal in Next.js, converting Figma designs into production-ready code featuring live class integration, secure payment gateways, and adaptive testing modules.",
+        skills: ["Next.js", "Vue.js", "Tailwind CSS", "Refactoring", "Payment Gateways"]
+    },
+    {
         role: "Lead",
         org: "TinkerHub CUSAT",
         period: "2025 - Present",

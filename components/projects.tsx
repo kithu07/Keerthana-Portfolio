@@ -31,6 +31,9 @@ export default function Projects() {
   useEffect(() => {
     if (typeof window === "undefined") return
 
+    const isDesktop = window.matchMedia("(min-width: 1024px)").matches
+    if (!isDesktop) return
+
     const section = sectionRef.current
     const container = cardsContainerRef.current
     const cards = cardRefs.current.filter(Boolean) as HTMLDivElement[]
@@ -74,11 +77,9 @@ export default function Projects() {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: section,
-        start: "top top",
-        end: `+=${(totalCards - 1) * 350}`,
-        scrub: 2.5, // Higher = smoother
-        pin: true,
-        anticipatePin: 1,
+        start: "top bottom",
+        end: "bottom top",
+        scrub: 1.5, // Smooth, but no pinning
       },
     })
 
@@ -115,7 +116,7 @@ export default function Projects() {
     <section
       ref={sectionRef}
       id="projects"
-      className="min-h-screen relative overflow-hidden bg-slate-950"
+      className="relative overflow-hidden bg-slate-950 py-24"
     >
       {/* Background Elements */}
       <div className="absolute inset-0 pointer-events-none">
@@ -123,7 +124,7 @@ export default function Projects() {
         <div className="absolute bottom-1/4 left-1/3 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000" />
       </div>
 
-      <div className="container mx-auto px-4 py-24 relative z-10 h-screen flex items-center">
+      <div className="container mx-auto px-4 relative z-10 flex items-center">
         <div className="grid lg:grid-cols-2 gap-12 items-center w-full">
           {/* Text Side */}
           <div className="text-left">

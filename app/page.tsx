@@ -9,7 +9,7 @@ import Skills from "@/components/skills"
 import Projects from "@/components/projects"
 import Achievements from "@/components/achievements"
 import Education from "@/components/education"
-import Contact from "@/components/contact"
+import ContactSection from "@/components/contact"
 import ParticleBackground from "@/components/particle-background"
 import CustomCursor from "@/components/custom-cursor"
 import Navbar from "@/components/navbar"
@@ -27,12 +27,12 @@ export default function Home() {
   }, [])
 
   return (
-    <div className="dark relative min-h-screen overflow-hidden bg-slate-950 text-white noise-bg">
+    <div className="dark relative min-h-screen bg-slate-950 text-white noise-bg overflow-x-hidden">
       <CustomCursor />
       <ParticleBackground />
       <Navbar />
 
-      <main className="relative z-10">
+      <main className="relative z-10 w-full">
         <Hero />
         <About />
         <Experience />
@@ -40,10 +40,8 @@ export default function Home() {
         <Projects />
         <Achievements />
         <Education />
-        <Contact />
+        <ContactSection />
       </main>
     </div>
   )
 }
-
-

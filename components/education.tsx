@@ -54,7 +54,7 @@ export default function Education() {
                                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-2">
                                     <h3 className="text-3xl font-bold text-white">Bachelor of Technology</h3>
                                     <div className="flex items-center gap-2 text-slate-400 bg-white/5 px-3 py-1 rounded-full text-sm border border-white/5">
-                                        <Calendar className="w-4 h-4" /> 2022 - 2026
+                                        <Calendar className="w-4 h-4" /> 2023 - 2027
                                     </div>
                                 </div>
                                 <div className="text-xl text-blue-400 font-medium mb-1">Computer Science and Engineering</div>
@@ -71,7 +71,7 @@ export default function Education() {
                                     <div className="flex items-center gap-4 bg-slate-800/50 p-4 rounded-xl border border-white/5">
                                         <div className="flex flex-col">
                                             <span className="text-xs text-slate-500">CGPA</span>
-                                            <span className="text-2xl font-bold text-white">8.5</span>
+                                            <span className="text-2xl font-bold text-white">9.97</span>
                                         </div>
                                         <div className="h-8 w-px bg-white/10" />
                                         <div className="flex flex-col">
